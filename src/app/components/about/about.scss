@@ -34,6 +34,7 @@ section {
     section {
         height: unset;
         flex-direction: column;
+        align-items: stretch;
         gap: var(--padding);
 
         img {
