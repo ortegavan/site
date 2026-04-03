@@ -1,0 +1,32 @@
+section {
+    background-color: #fce4ef;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    div {
+        flex: 1;
+    }
+
+    img {
+        width: 320px;
+        height: auto;
+    }
+}
+
+.text {
+    padding: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
