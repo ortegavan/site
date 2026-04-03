@@ -43,6 +43,11 @@ section {
         }
     }
 
+    div:has(img) {
+        display: flex;
+        justify-content: center;
+    }
+
     .text {
         padding: 0;
     }
