@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #131313;
+    --secondary-color: #f5f5f5;
+    --accent-color: #eb589c;
+    --font-family: "Outfit", sans-serif;
+    --padding: 32px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pink {
+    color: var(--accent-color);
+}
