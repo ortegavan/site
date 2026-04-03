@@ -1,0 +1,12 @@
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    height: calc(100vh - 100px);
+}
+
+.kit-form-wrapper {
+    margin-top: -32px !important;
+    margin-left: -13px !important;
+}
