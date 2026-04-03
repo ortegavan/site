@@ -1,0 +1,14 @@
+section {
+    height: 100vh;
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p,
+a {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
