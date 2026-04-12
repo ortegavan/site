@@ -12,7 +12,7 @@
     @if (ctaDisabled()) {
       <button class="cta cta--disabled" disabled aria-disabled="true">{{ ctaLabel() }}</button>
     } @else {
-      <a class="cta cta--active" [href]="ctaLink()" role="button">{{ ctaLabel() }}</a>
+      <a class="cta cta--active" [routerLink]="ctaLink() ?? null" role="button">{{ ctaLabel() }}</a>
     }
   }
 </div>

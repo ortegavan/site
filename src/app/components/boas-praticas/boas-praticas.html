@@ -1,0 +1,313 @@
+<app-header />
+
+<main>
+  <!-- 1. HERO -->
+  <section class="section hero" id="hero">
+    <div class="container">
+      <span class="badge">Chegando</span>
+      <h1>Boas práticas com <span class="pink">Angular</span></h1>
+      <p class="subtitle">
+        Do setup ao deploy, com foco em arquitetura, performance, acessibilidade e produtividade.
+      </p>
+      <div #kitFormHero class="kit-form-wrapper">
+        <div data-uid="6554388e27"></div>
+      </div>
+      <p class="microcopy">Cadastrados na lista recebem condições especiais de lançamento.</p>
+    </div>
+  </section>
+
+  <!-- 2. PRA QUEM É ESTE CURSO -->
+  <section class="section section-alt" id="para-quem">
+    <div class="container">
+      <h2>Pra quem é este curso</h2>
+      <ul class="checklist">
+        <li>
+          <i class="fa-duotone fa-solid fa-arrow-turn-right" aria-hidden="true"></i>
+          Devs que já conhecem o básico de Angular e querem profissionalizar
+        </li>
+        <li>
+          <i class="fa-duotone fa-solid fa-arrow-turn-right" aria-hidden="true"></i>
+          Devs vindos de outras versões que querem se atualizar pro Angular moderno
+        </li>
+        <li>
+          <i class="fa-duotone fa-solid fa-arrow-turn-right" aria-hidden="true"></i>
+          Quem trabalha em projetos corporativos e quer padrões escaláveis
+        </li>
+        <li>
+          <i class="fa-duotone fa-solid fa-arrow-turn-right" aria-hidden="true"></i>
+          Quem quer fundamentar decisões técnicas com critérios, não com achismo
+        </li>
+      </ul>
+      <p class="prereqs">
+        <strong>Pré-requisitos:</strong> TypeScript intermediário e familiaridade básica com Angular
+        (componentes, templates, services).
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. O QUE VOCÊ VAI APRENDER -->
+  <section class="section" id="modulos">
+    <div class="container">
+      <h2>O que você vai aprender</h2>
+      <div class="accordion" role="list">
+        <details open role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Módulo 1: Projeto moderno do zero</summary>
+          <div class="accordion-content">
+            <div>
+              <ul>
+                <li>Criando o projeto com Angular CLI (zoneless, Vitest, SSR, esbuild+Vite)</li>
+                <li>Estrutura de pastas por features: core, features, shared</li>
+                <li>ESLint com angular-eslint e regras estritas</li>
+                <li>Prettier e consistência de código</li>
+                <li>Configuração do TypeScript (strict mode, paths)</li>
+                <li>Convenções de nomenclatura</li>
+                <li>Processo de atualização do Angular e dependências</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Módulo 2: Decisões de arquitetura no dia a dia</summary>
+          <div class="accordion-content">
+            <div>
+              <ul>
+                <li>Template-driven vs reactive forms: critérios objetivos pra escolher</li>
+                <li>Content projection vs inputs: quando cada padrão escala melhor</li>
+                <li>Componentes inteligentes vs componentes de apresentação</li>
+                <li>Organização de serviços: quando um service vira god class</li>
+                <li>Interceptors em cadeia: ordem, efeitos colaterais e boas práticas</li>
+                <li>Injeção de dependência avançada: InjectionToken, hierarquia de injetores</li>
+                <li>Memory leaks, circular dependencies e barrel files</li>
+                <li>Padrões de comunicação entre componentes</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Módulo 3: Reatividade com Signals</summary>
+          <div class="accordion-content">
+            <div>
+              <ul>
+                <li>Fundamentos: signal(), computed(), effect()</li>
+                <li>Effects: o que fazer e o que evitar</li>
+                <li>Interop com RxJS: toSignal(), toObservable()</li>
+                <li>Resource API para acesso a dados</li>
+                <li>Signal inputs, two-way binding e model signals</li>
+                <li>Signal Forms: validators, schemas, nested forms, custom controls</li>
+                <li>Estado local vs global: quando signals bastam</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Módulo 4: Estado e gerenciamento de dados</summary>
+          <div class="accordion-content">
+            <div>
+              <ul>
+                <li>Arquitetura de estado: local, feature-level, global</li>
+                <li>NgRx SignalStore: criando stores leves</li>
+                <li>View models e estado normalizado</li>
+                <li>Gerenciamento de entidades com withEntities()</li>
+                <li>Custom features para requisitos recorrentes</li>
+                <li>Side effects baseados em RxJS</li>
+                <li>SignalStore + Resource API + httpResource</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Módulo 5: Performance</summary>
+          <div class="accordion-content">
+            <div>
+              <ul>
+                <li>Ferramentas: Lighthouse, Web Vitals, bundle analyzer</li>
+                <li>NgOptimizedImage e otimização de imagens</li>
+                <li>Bundle size, tree shaking e impacto de libs de terceiros</li>
+                <li>Lazy loading e estratégias de preloading</li>
+                <li>&#64;defer: deferrable components e libraries</li>
+                <li>SSR, hybrid rendering e prerendering (SSG)</li>
+                <li>Hydration, partial hydration e event replay</li>
+                <li>Change detection: OnPush, signals e zone-less</li>
+                <li>Virtual scrolling com CDK</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Módulo 6: Acessibilidade</summary>
+          <div class="accordion-content">
+            <div>
+              <ul>
+                <li>Ferramentas: Lighthouse a11y, Wave, leitores de tela</li>
+                <li>WAI, WCAG 2.2, ARIA roles e atributos</li>
+                <li>HTML semântico e estrutura de documento</li>
+                <li>Acessibilidade no Angular Router</li>
+                <li>Angular Material e CDK para acessibilidade</li>
+                <li>CSS acessível: foco visível, contraste, prefers-reduced-motion</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Bônus: Produtividade com IA</summary>
+          <div class="accordion-content">
+            <div>
+              <ul>
+                <li>Usando IA para pesquisa e aprendizado Angular</li>
+                <li>Geração de código: modelos, componentes, testes</li>
+                <li>GitHub Copilot e copilot-instructions.md</li>
+                <li>Angular MCP Server</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SOBRE A INSTRUTORA -->
+  <section class="section section-alt" id="instrutora">
+    <div class="container">
+      <h2>Sobre a instrutora</h2>
+      <div class="instructor">
+        <div class="instructor-photo">
+          <img ngSrc="van.jpg" alt="Foto de Vanessa Ortega" fill />
+        </div>
+        <div class="instructor-bio">
+          <p>
+            Van Ortega é desenvolvedora frontend há mais de 6 anos, apaixonada por Angular e por
+            ensinar. Autora do livro "Angular na Prática", cria conteúdo técnico avançado para a
+            comunidade brasileira de Angular.
+          </p>
+          <div class="instructor-links">
+            <a
+              href="https://www.linkedin.com/in/ortegavan/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-square-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+            <a href="https://angularnapratica.com.br" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-book" aria-hidden="true"></i> Angular na Prática
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. O QUE ESTÃO DIZENDO -->
+  <section class="section" id="depoimentos">
+    <div class="container">
+      <h2>O que estão dizendo</h2>
+      <p class="section-subtitle">Avaliações do livro Angular na Prática</p>
+      <div class="testimonials">
+        <blockquote class="testimonial-card">
+          <p>
+            "Excelente livro para quem quer aprender Angular na prática. A didática é incrível e o
+            projeto guiado torna o aprendizado muito mais fluido."
+          </p>
+          <footer>— Leitor da Amazon</footer>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>
+            "Muito bem escrito, direto ao ponto. Perfeito para quem já sabe programar e quer entrar
+            no Angular com o pé direito."
+          </p>
+          <footer>— Leitor da Amazon</footer>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>
+            "O melhor material em português sobre Angular que já encontrei. A autora realmente
+            entende do assunto."
+          </p>
+          <footer>— Leitor da Amazon</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <h2>Perguntas frequentes</h2>
+      <div class="accordion" role="list">
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Preciso saber Angular pra fazer o curso?</summary>
+          <div class="accordion-content">
+            <div>
+              <p>
+                Sim. O curso parte do princípio que você já conhece o básico: componentes,
+                templates, services e roteamento. Se você já trabalha com Angular no dia a dia, está
+                no nível certo.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Qual versão do Angular?</summary>
+          <div class="accordion-content">
+            <div>
+              <p>
+                O curso será gravado com a versão mais recente disponível no momento do lançamento.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Em que formato são as aulas?</summary>
+          <div class="accordion-content">
+            <div>
+              <p>
+                Videoaulas gravadas que você assiste no seu ritmo, construindo uma aplicação real do
+                zero.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>Tem certificado?</summary>
+          <div class="accordion-content">
+            <div>
+              <p>Sim, ao concluir todos os módulos você recebe um certificado de conclusão.</p>
+            </div>
+          </div>
+        </details>
+
+        <details role="listitem" (toggle)="onAccordionToggle($event)">
+          <summary>E se eu tiver dúvidas durante o curso?</summary>
+          <div class="accordion-content">
+            <div>
+              <p>Detalhes sobre o suporte serão divulgados junto com o lançamento.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CTA FINAL -->
+  <section class="section cta-final" id="cta">
+    <div class="container">
+      <h2>Não perca o lançamento</h2>
+      <p>
+        Cadastre-se para receber condições especiais e ser avisada quando o curso estiver
+        disponível.
+      </p>
+      <div #kitFormCta class="kit-form-wrapper">
+        <div data-uid="6554388e27"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer />
