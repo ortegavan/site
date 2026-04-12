@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -9,4 +9,5 @@ import { Component, input } from '@angular/core';
 export class Card {
   public title = input<string>();
   public icon = input<string>();
+  public hovered = signal(false);
 }

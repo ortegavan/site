@@ -1,6 +1,6 @@
-<div class="card">
+<div class="card" (mouseenter)="hovered.set(true)" (mouseleave)="hovered.set(false)">
   @if (icon()) {
-    <i [class]="icon()"></i>
+    <i [class]="icon()" [class.fa-shake]="hovered()" (animationend)="hovered.set(false)"></i>
   }
   @if (title()) {
     <h3>{{ title() }}</h3>

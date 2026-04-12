@@ -12,5 +12,9 @@
     i {
         align-self: center;
         font-size: 48px;
+
+        &.fa-shake {
+            --fa-animation-iteration-count: 2;
+        }
     }
 }
