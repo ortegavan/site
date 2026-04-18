@@ -10,10 +10,6 @@
     &.section-alt {
         background-color: #f4ecf0;
     }
-
-    &.cta-final {
-        background-color: #eaeaea;
-    }
 }
 
 .container {
@@ -23,31 +19,28 @@
 }
 
 // ── Hero ──────────────────────────────────────────────────────
-// A section hero não tem padding próprio: o padding fica no .container
-// para replicar exatamente a estrutura da hero da home (section.container)
+// A section.hero também tem a classe .container (max-width + margin auto),
+// replicando exatamente a estrutura de hero.scss
 .hero {
     height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0;
-
-    .container {
-        padding: var(--padding);
-        gap: 8px;
-    }
+    padding: var(--padding);
+    gap: 8px;
 
     .badge {
         display: inline-block;
         align-self: flex-start;
-        background-color: #f4ecf0;
-        color: #c2366f;
+        background-color: #fce4ef;
+        color: var(--accent-color);
         font-size: 0.75rem;
         font-weight: 700;
         border-radius: 999px;
         padding: 4px 16px;
         letter-spacing: 0.05em;
         text-transform: uppercase;
+        margin-bottom: -16px;
     }
 
     .subtitle {
@@ -132,7 +125,7 @@
             }
 
             &::after {
-                content: '+';
+                content: "+";
                 font-size: 1.4rem;
                 font-weight: 300;
                 color: var(--accent-color);
@@ -154,7 +147,9 @@
         .accordion-content {
             display: grid;
             grid-template-rows: 0fr;
-            transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
+            transition:
+                grid-template-rows 0.3s ease,
+                opacity 0.3s ease;
             opacity: 0;
 
             > div {
@@ -185,51 +180,6 @@
             padding: 4px var(--padding) 24px;
             font-size: 0.95rem;
             line-height: 1.6;
-        }
-    }
-}
-
-// ── Sobre a instrutora ────────────────────────────────────────
-.instructor {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-
-    &-photo {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        flex-shrink: 0;
-    }
-
-    &-bio {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    &-links {
-        display: flex;
-        gap: 24px;
-        flex-wrap: wrap;
-
-        a {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--accent-color);
-            font-weight: 600;
-
-            i {
-                font-size: 1.1rem;
-            }
-
-            &:focus-visible {
-                outline: 2px solid var(--accent-color);
-                border-radius: 2px;
-            }
         }
     }
 }
@@ -301,12 +251,8 @@
         height: auto;
         min-height: calc(100dvh - 64px);
         justify-content: flex-start;
-        padding: 0;
-
-        .container {
-            padding: var(--padding);
-            padding-top: 48px;
-        }
+        padding: var(--padding);
+        padding-top: 48px;
     }
 
     .cta-final {

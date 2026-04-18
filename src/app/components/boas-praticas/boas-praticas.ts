@@ -7,13 +7,12 @@ import {
   ViewChild,
   inject,
 } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 import { Header } from '../header/header';
 import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-boas-praticas',
-  imports: [Header, Footer, NgOptimizedImage],
+  imports: [Header, Footer],
   templateUrl: './boas-praticas.html',
   styleUrl: './boas-praticas.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -25,7 +24,7 @@ export default class BoasPraticas implements AfterViewInit {
   @ViewChild('kitFormCta') kitFormCta!: ElementRef;
 
   ngAfterViewInit(): void {
-    const uid = '6554388e27';
+    const uid = '0032279c61';
     this.loadKitForm(this.kitFormHero, uid);
     this.loadKitForm(this.kitFormCta, uid);
   }
