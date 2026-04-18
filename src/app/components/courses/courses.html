@@ -1,21 +1,31 @@
 <section class="container" id="courses">
-  <h2>Em breve</h2>
-  <p>Quer saber quando os cursos serão lançados? Inscreva-se na minha newsletter</p>
+  <h2>Cursos</h2>
+  <p>Aprenda Angular na prática com quem trabalha no dia a dia com o framework.</p>
   <div class="cards">
     <app-card
-      title="Curso: UI para desenvolvedores Angular"
-      icon="fa-duotone fa-solid fa-swatchbook"
+      title="Boas práticas com Angular"
+      icon="fa-duotone fa-solid fa-sitemap"
+      ctaLabel="Quero saber mais"
+      ctaLink="/boas-praticas"
     >
-      Aprenda a criar e organizar interfaces de usuário incríveis com Angular
+      Do setup ao deploy: arquitetura, signals, performance e acessibilidade em um projeto real.
     </app-card>
     <app-card
-      title="Curso: Estado reativo com NgRx + SignalStore"
-      icon="fa-duotone fa-solid fa-floppy-disks"
+      title="Estado reativo com NgRx + SignalStore"
+      icon="fa-duotone fa-solid fa-chart-network"
+      ctaLabel="Aguarde"
+      [ctaDisabled]="true"
     >
-      Gerenciamento de estado reativo no Angular com NgRx e SignalStore
+      Gerenciamento de estado escalável no Angular com os patterns que funcionam em produção.
     </app-card>
-    <app-card title="Curso: apps móveis com Ionic + Angular" icon="fa-duotone fa-solid fa-mobile">
-      Desenvolva aplicativos móveis com Ionic e Angular
+    <app-card
+      title="UI para desenvolvedores Angular"
+      icon="fa-duotone fa-solid fa-swatchbook"
+      ctaLabel="Aguarde"
+      [ctaDisabled]="true"
+    >
+      Crie interfaces bonitas e consistentes com design system, componentes reutilizáveis e boas
+      práticas de UX.
     </app-card>
   </div>
 </section>

@@ -1,6 +1,6 @@
 .card {
-    width: 300px;
-    height: 300px;
+width: 300px;
+    min-height: 300px;
     background-color: #eaeaea;
     border-radius: 4px;
     padding: var(--padding);
@@ -8,9 +8,47 @@
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    gap: 12px;
 
     i {
         align-self: center;
         font-size: 48px;
+
+        &.fa-shake {
+            --fa-animation-iteration-count: 2;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+
+.cta {
+        display: inline-block;
+        align-self: flex-start;
+        margin-top: auto;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        line-height: normal;
+
+        &--active {
+            background-color: #ff6b9d;
+            color: #ffffff;
+
+            &:hover {
+                background-color: #e85a8a;
+            }
+        }
+
+        &--disabled {
+            background-color: #D1D5DB;
+            color: #9CA3AF;
+            cursor: not-allowed;
+        }
     }
 }

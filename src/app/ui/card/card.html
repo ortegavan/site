@@ -1,6 +1,6 @@
-<div class="card">
-  @if (icon()) {
-    <i [class]="icon()"></i>
+<div class="card" (mouseenter)="hovered.set(true)" (mouseleave)="hovered.set(false)">
+@if (icon()) {
+    <i [class]="icon()" [class.fa-shake]="hovered()" (animationend)="hovered.set(false)"></i>
   }
   @if (title()) {
     <h3>{{ title() }}</h3>
@@ -8,4 +8,11 @@
   <p>
     <ng-content />
   </p>
+  @if (ctaLabel()) {
+    @if (ctaDisabled()) {
+      <button class="cta cta--disabled" disabled aria-disabled="true">{{ ctaLabel() }}</button>
+    } @else {
+      <a class="cta cta--active" [routerLink]="ctaLink() ?? null" role="button">{{ ctaLabel() }}</a>
+    }
+  }
 </div>
