@@ -1,5 +1,5 @@
 <div class="card" (mouseenter)="hovered.set(true)" (mouseleave)="hovered.set(false)">
-@if (icon()) {
+  @if (icon()) {
     <i [class]="icon()" [class.fa-shake]="hovered()" (animationend)="hovered.set(false)"></i>
   }
   @if (title()) {
